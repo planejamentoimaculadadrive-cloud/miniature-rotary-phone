@@ -1,6 +1,11 @@
 # 🍎 Portal Docente - Gestão de Planos de Aula (BNCC)
 
 Este projeto é um sistema web completo desenvolvido para facilitar a rotina de professores na elaboração de planejamentos de aula. O sistema é integrado diretamente com o Google Planilhas, servindo como um banco de dados dinâmico.
+### 🚀 Teste o Sistema em Tempo Real
+
+Clique no botão abaixo para abrir a versão oficial hospedada no Google:
+
+[![Acessar Portal Docente](https://img.shields.io/badge/Acessar-Portal%20Docente-00875F?style=for-the-badge&logo=google-chrome&logoColor=white)]([COLE_AQUI_O_LINK_DO_GOOGLE_EXEC](https://script.google.com/macros/s/AKfycbwqAdtDoo3J9-IwIH52ITSQWIBXD9N8CpJm2ZyE_3fd2MucioanE9b4UfgBsbrCUe4x/exec))
 
 ## 🚀 Funcionalidades
 - **Login Personalizado:** Acesso restrito via aba `CADASTRO_DOCENTE`.
