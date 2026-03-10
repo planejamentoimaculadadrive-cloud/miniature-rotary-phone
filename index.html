@@ -1,232 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <base target="_top">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Docente</title>
-  
-  <link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1VotgpjdCZ0UreMOYpos9_wtkhvwnEZ92&sz=w300">
-  <link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=1VotgpjdCZ0UreMOYpos9_wtkhvwnEZ92&sz=w300">
-  <meta name="theme-color" content="#1877f2">
-
-  <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 10px; text-align: center; }
-    .card { display: none !important; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; }
-    .active { display: block !important; }
-    .logo-superior { width: 140px; margin-bottom: 10px; }
-    .footer-login { margin-top: 30px; }
-    .footer-login img { width: 120px; }
-    .footer-login p { font-size: 10px; color: #888; }
-    .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
-    .btn-menu-box { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
-    .btn-menu-box:hover { border-color: #1877f2; background: #f0f7ff; transform: translateY(-3px); }
-    .btn-menu-box.logout { background: #fff5f5; }
-    .btn-menu-box .icon { font-size: 30px; margin-bottom: 10px; }
-    label { display: block; text-align: left; font-weight: bold; font-size: 14px; color: #555; margin: 10px 0 4px 0; }
-    input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
-    button { width: 100%; padding: 14px; background: #1877f2; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 15px; font-size: 16px; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .btn-nav { width: auto; background: #f0f2f5; color: #444; padding: 8px 18px; border-radius: 6px; border: none; cursor: pointer; float: left; margin-bottom: 10px; font-size: 14px; }
-    
-    .card-plano { border-left: 6px solid #1877f2; padding: 18px; background: #fff; margin-bottom: 18px; text-align: left; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .card-plano .titulo-tema { color: #1877f2; font-size: 20px; margin-bottom: 8px; display: block; font-weight: bold; text-transform: uppercase; }
-    .card-plano .info-linha { font-size: 15px; color: #333; margin-bottom: 5px; border-bottom: 1px solid #f0f2f5; padding-bottom: 4px; line-height: 1.4; }
-    .detalhe-badge { display: inline-block; background: #e7f3ff; color: #1877f2; padding: 3px 10px; border-radius: 5px; font-size: 13px; font-weight: bold; margin-right: 5px; }
-    .box-bncc { margin: 12px 0; padding: 10px; background: #fdfdfd; border: 1px solid #eee; border-radius: 8px; font-size: 14px; line-height: 1.5; }
-
-    .resumo-item { display: flex; justify-content: space-between; padding: 12px; border-bottom: 1px solid #eee; font-size: 16px; }
-    .resumo-item b { color: #1877f2; }
-    .header-resumo { background: #f8f9fa; padding: 12px; border-radius: 8px 8px 0 0; font-weight: bold; margin-top: 15px; border: 1px solid #ddd; font-size: 16px; }
-
-    #inputBusca { margin-bottom: 15px; border: 2px solid #1877f2; height: 50px; font-size: 16px; }
-
-    #areaImpressao { display: none; }
-    @media print {
-      body * { visibility: hidden; }
-      #areaImpressao, #areaImpressao * { visibility: visible; }
-      #areaImpressao { display: block !important; position: absolute; left: 0; top: 0; width: 100%; }
-      .pagina-pdf { padding: 30px; font-family: Arial; line-height: 1.6; }
-      .header-pdf { border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 20px; text-align: center; }
-      .secao-pdf { margin-bottom: 12px; border: 1px solid #ccc; padding: 8px; border-radius: 4px; }
-      .secao-pdf b { font-size: 12px; color: #444; display: block; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Portal Docente - Redirecionamento</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f7f6; }
+        .card { text-align: center; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 400px; }
+        h1 { color: #2c3e50; font-size: 24px; }
+        p { color: #7f8c8d; margin-bottom: 30px; }
+        .btn { 
+            background-color: #00875F; color: white; padding: 15px 30px; 
+            text-decoration: none; border-radius: 6px; font-weight: bold;
+            display: inline-block; transition: background 0.3s;
+        }
+        .btn:hover { background-color: #005f43; }
+    </style>
 </head>
 <body>
 
-  <div id="view-login" class="card active">
-    <img src="https://drive.google.com/thumbnail?id=1VotgpjdCZ0UreMOYpos9_wtkhvwnEZ92&sz=w500" class="logo-superior">
-    <h2>Acesso ao Sistema</h2>
-    <label>Docente:</label><select id="login-nome"><option>Carregando...</option></select>
-    <label>Senha:</label><input type="password" id="login-senha" placeholder="Sua senha">
-    <button onclick="realizarLogin()">Entrar</button>
+<div class="card">
+    <h1>🍎 Portal Docente</h1>
+    <p>Para visualizar o sistema funcionando com o Google Planilhas, clique no botão abaixo:</p>
     
-    <div class="footer-login">
-       <img src="https://drive.google.com/thumbnail?id=1wFG_lVb52jmO24hfhA7Q5JHnT8XhKU_b&sz=w300">
-       <p>@Erivaldo Silva</p>
-    </div>
-  </div>
+    <a href="https://script.google.com/macros/s/AKfycbwqAdtDoo3J9-IwIH52ITSQWIBXD9N8CpJm2ZyE_3fd2MucioanE9b4UfgBsbrCUe4x/exec" 
+       target="_blank" class="btn">
+       ABRIR SISTEMA OFICIAL
+    </a>
+</div>
 
-  <div id="view-menu" class="card">
-    <h2 id="txt-bem-vindo">Painel de Controle</h2>
-    <div class="menu-grid">
-      <div class="btn-menu-box" onclick="prepararNovoPlano()"><span class="icon">📝</span><b>Novo Plano</b></div>
-      <div class="btn-menu-box" onclick="irPara('view-lista')"><span class="icon">📂</span><b>Meus Planos</b></div>
-      <div class="btn-menu-box" onclick="irPara('view-resultados')"><span class="icon">📊</span><b>Resultados</b></div>
-      <div class="btn-menu-box logout" onclick="sairDoSistema()"><span class="icon">🚪</span><b>Sair</b></div>
-    </div>
-  </div>
-
-  <div id="view-resultados" class="card">
-    <button class="btn-nav" onclick="irPara('view-menu')">← Menu</button>
-    <h3 style="color:#1a73e8;">📊 Resumo de Atividades</h3>
-    <label>Filtrar por Escola:</label>
-    <select id="filtro-escola-resumo" onchange="gerarResultados()"><option value="">Todas as Escolas</option></select>
-    <div id="dash-resumo" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
-      <div style="background:#e8f0fe; padding:15px; border-radius:10px;">PLANOS: <br><b id="resumo-total" style="font-size: 22px;">0</b></div>
-      <div style="background:#e6f4ea; padding:15px; border-radius:10px;">AULAS: <br><b id="resumo-aulas" style="font-size: 22px;">0</b></div>
-    </div>
-    <div class="header-resumo">Detalhamento por Disciplina</div>
-    <div id="lista-resultados" style="text-align: left; background: white; border: 1px solid #ddd; border-top: none;"></div>
-  </div>
-
-  <div id="view-form" class="card">
-    <button class="btn-nav" onclick="irPara('view-menu')">← Menu</button>
-    <h3 id="titulo-form">📝 Cadastrar Planejamento</h3>
-    <input type="hidden" id="f-linha-edit">
-    <label>Escola:</label><select id="f-escola"></select>
-    <div class="grid-2">
-      <div><label>Bimestre:</label><select id="f-bimestre"></select></div>
-      <div><label>Turno:</label><select id="f-turno"></select></div>
-    </div>
-    <div class="grid-2">
-      <div><label>Turma:</label><select id="f-turma"></select></div>
-      <div><label>Data:</label><input type="date" id="f-data"></div>
-    </div>
-    <label>Aulas:</label><input type="number" id="f-aulas" value="1">
-    <hr>
-    <label>Área:</label><select id="f-area" onchange="atualizarAno()"></select>
-    <label>Série/Ano:</label><select id="f-ano" onchange="atualizarPratica()"></select>
-    <label>Práticas:</label><select id="f-pratica" onchange="atualizarObjeto()"></select>
-    <label>Objetos:</label><select id="f-objeto" onchange="atualizarHabilidade()"></select>
-    <label>Habilidades:</label><select id="f-habilidade"></select>
-    <label>Tema/Subtema:</label><input type="text" id="f-tema">
-    <label>Metodologia:</label><textarea id="f-metodo" rows="4"></textarea>
-    <button onclick="salvar()" id="btn-salvar">Salvar Plano</button>
-  </div>
-
-  <div id="view-lista" class="card">
-    <button class="btn-nav" onclick="irPara('view-menu')">← Menu</button>
-    <h3 style="color:#1a73e8;">📂 Meus Planejamentos</h3>
-    <input type="text" id="inputBusca" placeholder="🔍 Buscar planos..." onkeyup="filtrarRegistros()">
-    <div id="listaRegistros"></div>
-  </div>
-
-  <div id="areaImpressao"></div>
-
-  <script>
-    var state = { user: "", db: null, listaOriginal: [] };
-    const tabelaLogos = {
-      "EMEIF MARIA MADALENA TORRES DANTAS": "https://drive.google.com/thumbnail?id=1K-Ih0PBzwMzmQXB7lWTZLQIZVifViHfL&sz=w1000",
-      "EMEF JOAQUIM ALVES FEITOSA": "https://drive.google.com/thumbnail?id=1hv79RSjQJo8CVsU_04BPZD86JIfhyeY2&sz=w1000",
-      "EMEF MIGUEL OTAVIANO DE MEDEIROS": "https://drive.google.com/thumbnail?id=1OW6SZAE_-Mvx8X3CPodNh0h7PLapSDOc&sz=w1000",
-      "EMEIF FRANCISCA QUIRINO FERREIRA": "https://drive.google.com/thumbnail?id=1O-I2kotbVIyPGxIu33ogp01haJej6ZL0&sz=w1000",
-      "EMEIF JOÃO GONÇALVES DA SILVA": "https://drive.google.com/thumbnail?id=1ifsNIUB2Ea18xaVSZiDqJkDV_940dieh&sz=w1000",
-      "EMEIF JOSÉ ALVES SABINO": "https://drive.google.com/thumbnail?id=1LE0qxYPlHKCMqzyXJRlVAKQ8P3-buMEU&sz=w1000",
-      "EMEIF JOSÉ PEDRO DE MELO": "https://drive.google.com/thumbnail?id=1JoBnXC_DYapa5NL_mI3hXQcVkaONHntr&sz=w1000",
-      "EMEIF JOSÉ VIEIRA DA SILVA": "https://drive.google.com/thumbnail?id=1rb3Pjy7IxHKlEWQEg5Q9eXG25QsCgfTv&sz=w1000",
-      "EMEIF MARIA PEREIRA DOS SANTOS": "https://drive.google.com/thumbnail?id=1uYhcIRmA3Ue_cpVG3uIh7UcoUCUv_63T&sz=w1000"
-    };
-
-    window.onload = () => { google.script.run.withSuccessHandler(n => { document.getElementById('login-nome').innerHTML = '<option value="">Docente...</option>' + n.map(i => `<option value="${i}">${i}</option>`).join(''); }).getNomesDocentes(); };
-    function irPara(t) { document.querySelectorAll('.card').forEach(c => c.classList.remove('active')); document.getElementById(t).classList.add('active'); if(t==='view-lista') carregarRegistros(); if(t==='view-resultados') carregarFiltrosResumo(); }
-    function sairDoSistema() { document.getElementById('login-senha').value=""; irPara('view-login'); }
-    function realizarLogin() { var n=document.getElementById('login-nome').value, s=document.getElementById('login-senha').value; google.script.run.withSuccessHandler(r => { if(r.status==="sucesso"){ state.user=r.nome; document.getElementById('txt-bem-vindo').innerText="Olá, Prof. "+r.nome; irPara('view-menu'); carregarListasIniciais(); }else alert("Senha incorreta!"); }).verificarLoginDocente(n,s); }
-    function carregarListasIniciais() { google.script.run.withSuccessHandler(res => { state.db=res; popular('f-escola',res.escolas); popular('f-bimestre',res.bimestres); popular('f-turno',res.turnos); popular('f-turma',res.turmas); popular('f-area',[...new Set(res.referencias.slice(1).map(r=>r[0]))]); }).getDadosIniciais(); }
-    function popular(i,l) { document.getElementById(i).innerHTML = '<option value="">Selecione...</option>'+l.map(x=>`<option value="${x}">${x}</option>`).join(''); }
-    function atualizarAno() { var v=document.getElementById('f-area').value; popular('f-ano',[...new Set(state.db.referencias.filter(r=>r[0]==v).map(r=>r[1]))]); }
-    function atualizarPratica() { var v=document.getElementById('f-area').value, a=document.getElementById('f-ano').value; popular('f-pratica',[...new Set(state.db.referencias.filter(r=>r[0]==v && r[1]==a).map(r=>r[2]))]); }
-    function atualizarObjeto() { var v=document.getElementById('f-area').value, a=document.getElementById('f-ano').value, p=document.getElementById('f-pratica').value; popular('f-objeto',[...new Set(state.db.referencias.filter(r=>r[0]==v && r[1]==a && r[2]==p).map(r=>r[3]))]); }
-    function atualizarHabilidade() { var v=document.getElementById('f-area').value, a=document.getElementById('f-ano').value, p=document.getElementById('f-pratica').value, o=document.getElementById('f-objeto').value; popular('f-habilidade',[...new Set(state.db.referencias.filter(r=>r[0]==v && r[1]==a && r[2]==p && r[3]==o).map(r=>r[4]))]); }
-    function prepararNovoPlano() { document.getElementById('titulo-form').innerText="📝 Novo Plano"; document.getElementById('f-linha-edit').value=""; document.getElementById('f-tema').value=""; document.getElementById('f-metodo').value=""; irPara('view-form'); }
-
-    function salvar() {
-      var d = { linhaEdit: document.getElementById('f-linha-edit').value, docente: state.user, escola: document.getElementById('f-escola').value, bimestre: document.getElementById('f-bimestre').value, turno: document.getElementById('f-turno').value, turma: document.getElementById('f-turma').value, data: document.getElementById('f-data').value, aulas: document.getElementById('f-aulas').value, area: document.getElementById('f-area').value, ano: document.getElementById('f-ano').value, pratica: document.getElementById('f-pratica').value, objeto: document.getElementById('f-objeto').value, habilidade: document.getElementById('f-habilidade').value, tema: document.getElementById('f-tema').value, metodo: document.getElementById('f-metodo').value };
-      google.script.run.withSuccessHandler(() => { alert("Salvo com sucesso!"); irPara('view-menu'); }).salvarPlanejamento(d);
-    }
-
-    function carregarRegistros() { google.script.run.withSuccessHandler(res => { state.listaOriginal=res; renderizarCards(res); }).getRelatorioDocente(state.user); }
-    
-    function renderizarCards(lista) {
-      const container = document.getElementById('listaRegistros');
-      container.innerHTML = lista.length ? "" : "Nenhum registro encontrado.";
-      [...lista].reverse().forEach(item => {
-        const d = item.colunas; const dataBR = d[5].split('-').reverse().join('/'); const itemData = encodeURIComponent(JSON.stringify(item));
-        container.innerHTML += `<div class="card-plano">
-          <b class="titulo-tema">${d[12] || "SEM TEMA"}</b>
-          <div class="info-linha">🏫 <b>Escola:</b> ${d[0]}</div>
-          <div class="info-linha">📅 <b>Data:</b> ${dataBR} | <span class="detalhe-badge">${d[4]}</span></div>
-          <div class="info-linha">👥 <b>Turma:</b> ${d[3]} | <b>Turno:</b> ${d[2]} | <b>Aulas:</b> ${d[6]}</div>
-          <div class="box-bncc"><b>📚 Área:</b> ${d[7]}<br><b>⚙️ Prática:</b> ${d[9]}<br><b>🎯 Obj:</b> ${d[10]}<br><span style="color:#d93025;font-weight:bold;">💡 Hab: ${d[11]}</span></div>
-          <div style="display:flex; gap:8px;">
-            <button onclick="imprimirPDF('${itemData}')" style="flex:1;">🖨️ PDF</button>
-            <button onclick="editarRegistro('${itemData}')" style="flex:1; background:#28a745;">✏️ Editar</button>
-            <button onclick="deletar(${item.linha})" style="flex:0.3; background:#ff4d4d;">🗑️</button>
-          </div>
-        </div>`;
-      });
-    }
-
-    function editarRegistro(itemCod) {
-      const item = JSON.parse(decodeURIComponent(itemCod)); const d = item.colunas;
-      document.getElementById('f-linha-edit').value = item.linha; document.getElementById('f-escola').value = d[0]; document.getElementById('f-bimestre').value = d[4];
-      document.getElementById('f-turno').value = d[2]; document.getElementById('f-turma').value = d[3]; document.getElementById('f-data').value = d[5]; document.getElementById('f-aulas').value = d[6];
-      document.getElementById('f-area').value = d[7]; atualizarAno(); document.getElementById('f-ano').value = d[8]; atualizarPratica(); document.getElementById('f-pratica').value = d[9];
-      atualizarObjeto(); document.getElementById('f-objeto').value = d[10]; atualizarHabilidade(); document.getElementById('f-habilidade').value = d[11];
-      document.getElementById('f-tema').value = d[12]; document.getElementById('f-metodo').value = d[13]; irPara('view-form');
-    }
-
-    function carregarFiltrosResumo() {
-      google.script.run.withSuccessHandler(res => {
-        state.listaOriginal = res;
-        const sel = document.getElementById('filtro-escola-resumo');
-        let esc = [...new Set(res.map(i => i.colunas[0]))].sort();
-        sel.innerHTML = '<option value="">Todas as Escolas</option>' + esc.map(e => `<option value="${e}">${e}</option>`).join('');
-        gerarResultados();
-      }).getRelatorioDocente(state.user);
-    }
-
-    function gerarResultados() {
-      const esc = document.getElementById('filtro-escola-resumo').value;
-      const filtered = esc ? state.listaOriginal.filter(i => i.colunas[0] === esc) : state.listaOriginal;
-      let totalAulas = 0, disc = {};
-      filtered.forEach(i => { let a = parseInt(i.colunas[6]||0); totalAulas += a; let area = i.colunas[7]||"Outra"; disc[area] = (disc[area]||0) + a; });
-      document.getElementById('resumo-total').innerText = filtered.length;
-      document.getElementById('resumo-aulas').innerText = totalAulas;
-      let h = ""; for(let d in disc) h += `<div class="resumo-item"><span>${d}</span><b>${disc[d]} aulas</b></div>`;
-      h += `<div class="resumo-item" style="background:#eee; font-weight:bold;"><span>TOTAL</span><b>${totalAulas} aulas</b></div>`;
-      document.getElementById('lista-resultados').innerHTML = h;
-    }
-
-    function imprimirPDF(itemCod) {
-      const reg = JSON.parse(decodeURIComponent(itemCod)); const d = reg.colunas;
-      const logo = tabelaLogos[d[0].trim()] || "https://drive.google.com/thumbnail?id=1VotgpjdCZ0UreMOYpos9_wtkhvwnEZ92&sz=w1000";
-      const area = document.getElementById('areaImpressao');
-      area.innerHTML = `<div class="pagina-pdf">
-        <div class="header-pdf"><img src="${logo}" width="120"><h2>${d[0]}</h2><h3>PLANO DE ENSINO</h3></div>
-        <div class="secao-pdf"><b>Docente / Data / Bimestre</b>${d[1]} | ${d[5].split('-').reverse().join('/')} | ${d[4]}</div>
-        <div class="secao-pdf"><b>Turma / Turno / Aulas</b>${d[3]} | ${d[2]} | ${d[6]}</div>
-        <div class="secao-pdf"><b>Área e Ano</b>${d[7]} (${d[8]})</div>
-        <div class="secao-pdf"><b>Prática e Objeto</b>${d[9]} / ${d[10]}</div>
-        <div class="secao-pdf"><b>Habilidade BNCC</b><b>${d[11]}</b></div>
-        <div class="secao-pdf"><b>Metodologia</b><div style="white-space:pre-wrap;">${d[13]}</div></div>
-      </div>`;
-      window.print();
-    }
-
-    function filtrarRegistros() { const b = document.getElementById('inputBusca').value.toLowerCase(); renderizarCards(state.listaOriginal.filter(i => i.colunas.join(" ").toLowerCase().includes(b))); }
-    function deletar(l) { if(confirm("Deseja realmente excluir este planejamento?")) google.script.run.withSuccessHandler(() => carregarRegistros()).excluirRegistro(l); }
-  </script>
 </body>
 </html>
